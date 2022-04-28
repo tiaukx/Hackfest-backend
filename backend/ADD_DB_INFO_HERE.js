@@ -1,5 +1,3 @@
-const DB_URL = "ENTER DB URL";
-const DB_NAME = "ENTER DB NAME";
+const DB_URL = "ENTER DB_URL HERE";
 
 module.exports.DB_URL = DB_URL;
-module.exports.DB_NAME = DB_NAME;

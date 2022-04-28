@@ -14,7 +14,7 @@ app.use((err,req,res,next)=>{
     res.status(err.statusCode || 500).send(err.message || "something went wrong");
 })
 
-mongoose.connect(`${databaseCred.DB_URL}${databaseCred.DB_NAME}`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+mongoose.connect(`${databaseCred.DB_URL}cinema`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err) {
         console.error(err);
     } else {
