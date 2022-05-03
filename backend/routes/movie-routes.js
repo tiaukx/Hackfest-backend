@@ -8,7 +8,9 @@ Router.get('/', (req, res) => {
 
 // Posting a new movie to the database
 Router.post("/movie", (req, res, next) => {
-    const movie = new Movie(req.body);
+    const movieObj = req.body; 
+    movieObj.rating = [];
+    const movie = new Movie(movieObj);
     movie.save().then((result) => {
         res.status(201).send("Added to Database");
     }).catch((error) => {
@@ -42,6 +44,16 @@ Router.get("/movie/all", (req, res, next) => {
 // Getting a movie by ID 
 Router.get("/movie/:id", (req, res, next) => {
     Movie.findById(req.params.id, (err, result) => {
+        if(err) {
+            next(err);
+        }
+        res.status(200).send(result);
+    })
+});
+
+// Getting a movie by title 
+Router.get("/movie/title/:title", (req, res, next) => {
+    Movie.find({title: req.params.title}, (err, result) => {
         if(err) {
             next(err);
         }
