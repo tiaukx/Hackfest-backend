@@ -94,7 +94,8 @@ The following routes are included in the application and can be used to access t
 
 Takes in a JSON Body in the format and posts it to the database, the backend adds the rating attribute without it being needed in the request body. 
 
-``` {
+``` 
+{
     "title" : "new movie",
     "runTime" : 130,
     "releaseData" : "12th April 2021",
