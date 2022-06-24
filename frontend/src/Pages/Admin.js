@@ -153,6 +153,7 @@ const Admin = ({ getData, fetchData }) => {
 
     return (
         <>
+            <br/>
             <h1>Admin Controls</h1>
             <h2>Please select whether you would like to add or delete a movie:</h2>
 

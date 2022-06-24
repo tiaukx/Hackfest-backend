@@ -9,6 +9,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 const About = () => {
     return (
         <>
+            <br/>
             <h1>QA Cinema</h1>
             <br />
             <Container id="contactInfo">

@@ -18,6 +18,7 @@ const Movies = () => {
 
     return (
         <>
+            <br/>
             <h2>List of Movies:</h2>
             <br/>
             <Container id="fullMovieList" className="d-flex vw-100">

@@ -1,7 +1,7 @@
 const Home = () => {
     return (
         <>
-            
+            <br/>
             <h1>QA Cinema</h1>
             <p>Committed to providing you with the ultimate film-going experience.</p>
 
