@@ -19,6 +19,7 @@ const Movies = () => {
     return (
         <>
             <h2>List of Movies:</h2>
+            <br/>
             <Container id="fullMovieList" className="d-flex vw-100">
                 <Row className="m-auto">
                     {

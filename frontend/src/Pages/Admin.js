@@ -83,7 +83,7 @@ const Admin = ({ getData, fetchData }) => {
                                 <Form.Control id="castInput" type="text" placeholder="Cast" value={cast} onChange={(event) => { setCast(event.target.value) }} />
                             </Form.Group>
                             <br/>
-                            <Button id="addButton" onClick={handleSubmit}>ADD MOVIE</Button>
+                            <Button id="addButton" variant="success" onClick={handleSubmit}>ADD MOVIE</Button>
                         </Form>
                         <br/>
                         {addConf()}
@@ -156,10 +156,9 @@ const Admin = ({ getData, fetchData }) => {
             <h1>Admin Controls</h1>
             <h2>Please select whether you would like to add or delete a movie:</h2>
 
-            <Button id="addMovie" onClick={loadMovieAdd}>ADD MOVIE</Button>
-            <p></p>
+            <Button id="addMovie" onClick={loadMovieAdd} >ADD MOVIE</Button>
             <Button id="deleteMovie" onClick={loadMovieDelete}>DELETE MOVIE</Button>
-            <br/>
+            <br/><br/>
             {deleteMovie()}
             {addMovie()}
         </>
