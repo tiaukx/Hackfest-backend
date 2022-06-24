@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 
 import Ratings from "./Ratings";
 
-const Movie = ({ title, runTime, releaseDate, description, director, cast, ratings }) => {
+const Movie = ({ id, title, runTime, releaseDate, description, director, cast, ratings }) => {
     return (
         <Card border="info" style={{ width: '18rem' }}>
             <Card.Header>{title}</Card.Header>
@@ -15,6 +15,7 @@ const Movie = ({ title, runTime, releaseDate, description, director, cast, ratin
                 <p>{director}</p>
                 <p>{cast}</p>
                 <p>{ratings}</p>
+                <p>ID: {id}</p>
             </Card.Body>
         </Card>
     )
@@ -29,5 +30,6 @@ Movie.propTypes = {
     description: PropTypes.string, 
     director: PropTypes.string,
     cast: PropTypes.string,
-    ratings: PropTypes.array
+    ratings: PropTypes.array,
+    _id: PropTypes.string
 }

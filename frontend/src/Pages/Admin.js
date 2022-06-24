@@ -58,27 +58,27 @@ const Admin = ({ getData, fetchData }) => {
                     <Container style={{ width: '30rem' }} className="justify-content-end">
                         <h4>Insert Values:</h4>
                         <Form>
-                            <Form.Group className="mb-3" controlId="formBasicTitle">
+                            <Form.Group className="mb-3" id="formBasicTitle">
                                 <Form.Label>Title</Form.Label>
                                 <Form.Control id="titleInput" type="text" placeholder="Title" value={title} onChange={(event) => { setTitle(event.target.value) }} required />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicRuntime">
+                            <Form.Group className="mb-3" id="formBasicRuntime">
                                 <Form.Label>Runtime</Form.Label>
                                 <Form.Control id="runTimeInput" type="number" placeholder="Runtime" value={runTime} onChange={(event) => { setRunTime(event.target.value) }} />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicReleaseDate">
+                            <Form.Group className="mb-3" id="formBasicReleaseDate">
                                 <Form.Label>Release Date</Form.Label>
                                 <Form.Control id="releaseDateInput" type="date" placeholder="Release Date" value={releaseDate} onChange={(event) => { setReleaseDate(event.target.value) }} />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicDescription">
+                            <Form.Group className="mb-3" id="formBasicDescription">
                                 <Form.Label>Description</Form.Label>
                                 <Form.Control id="descriptionInput" type="text" placeholder="Description" value={description} onChange={(event) => { setDescription(event.target.value) }} />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicDirector">
+                            <Form.Group className="mb-3" id="formBasicDirector">
                                 <Form.Label>Director</Form.Label>
                                 <Form.Control id="directorInput" type="text" placeholder="Director" value={director} onChange={(event) => { setDirector(event.target.value) }} />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicCast">
+                            <Form.Group className="mb-3" id="formBasicCast">
                                 <Form.Label>Cast</Form.Label>
                                 <Form.Control id="castInput" type="text" placeholder="Cast" value={cast} onChange={(event) => { setCast(event.target.value) }} />
                             </Form.Group>
@@ -95,7 +95,7 @@ const Admin = ({ getData, fetchData }) => {
     const handleDelete = (event) => {
         event.preventDefault();
 
-        axios.delete("http://localhost:5020/movie/:id")
+        axios.delete("http://localhost:5020/movie/" + id)
             .then((res) => {
                 console.log(res);
                 setTimeout(() => {
@@ -119,9 +119,9 @@ const Admin = ({ getData, fetchData }) => {
                     <Container style={{ width: '30rem' }} className="justify-content-end">
                         <h4>Insert ID:</h4>
                         <Form>
-                            <Form.Group className="mb-3" controlId="formBasicId">
+                            <Form.Group className="mb-3" id="formBasicId">
                                 <Form.Label>Insert ID</Form.Label>
-                                <Form.Control id="deleteById" type="number" min={0} placeholder="ID" value={id} onChange={(event) => { setId(event.target.value) }} required />
+                                <Form.Control id="deleteById" type="text" min={0} placeholder="ID" value={id} onChange={(event) => { setId(event.target.value) }} required />
                             </Form.Group>
                             <br/>
                             <Button id="deleteByIdBtn" variant="danger" className="button button1" onClick={handleDelete}>DELETE MOVIE</Button>
