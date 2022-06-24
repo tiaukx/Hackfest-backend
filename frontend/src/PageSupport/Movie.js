@@ -7,15 +7,18 @@ import Ratings from "./Ratings";
 const Movie = ({ title, runTime, releaseDate, description, director, cast, ratings }) => {
     return (
         <Card border="info" style={{ width: '18rem' }}>
-            <Card.Header>{title}</Card.Header>
+            <Card.Header><h4>{title}</h4></Card.Header>
             <Card.Body>
-                <p>{runTime}</p>
-                <p>{releaseDate}</p>
+                <p>Runtime: {runTime} minutes</p>
+                <p>Release Date: {releaseDate}</p>
                 <p>{description}</p>
-                <p>{director}</p>
-                <p>{cast}</p>
-                <p>{ratings}</p>
+                <p>Director: {director}</p>
+                <p>Cast: {cast}</p>
             </Card.Body>
+            <Card.Footer>
+                <h5>Reviews</h5>
+                <p>{ratings}</p>
+            </Card.Footer>
         </Card>
     )
 }
@@ -24,9 +27,9 @@ export default Movie;
 
 Movie.propTypes = {
     title: PropTypes.string,
-    runTime: PropTypes.number, 
+    runTime: PropTypes.number,
     releaseDate: PropTypes.string,
-    description: PropTypes.string, 
+    description: PropTypes.string,
     director: PropTypes.string,
     cast: PropTypes.string,
     ratings: PropTypes.array,
