@@ -85,6 +85,7 @@ const Admin = ({ getData, fetchData }) => {
                             <br/>
                             <Button id="addButton" onClick={handleSubmit}>ADD MOVIE</Button>
                         </Form>
+                        <br/>
                         {addConf()}
                     </Container>
                 </>
@@ -126,6 +127,7 @@ const Admin = ({ getData, fetchData }) => {
                             <br/>
                             <Button id="deleteByIdBtn" variant="danger" className="button button1" onClick={handleDelete}>DELETE MOVIE</Button>
                         </Form>
+                        <br/>
                         {deleteConf()}
                     </Container>
                 </>
@@ -157,6 +159,7 @@ const Admin = ({ getData, fetchData }) => {
             <Button id="addMovie" onClick={loadMovieAdd}>ADD MOVIE</Button>
             <p></p>
             <Button id="deleteMovie" onClick={loadMovieDelete}>DELETE MOVIE</Button>
+            <br/>
             {deleteMovie()}
             {addMovie()}
         </>

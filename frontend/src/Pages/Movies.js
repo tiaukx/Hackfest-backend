@@ -22,7 +22,7 @@ const Movies = () => {
             <Container id="fullMovieList" className="d-flex vw-100">
                 <Row className="m-auto">
                     {
-                        movies.map(movie => <Movie key={movie.id} id={movie.id} title={movie.title} runTime={movie.runTime}
+                        movies.map(movie => <Movie key={movie._id} id={movie._id} title={movie.title} runTime={movie.runTime}
                             releaseDate={movie.releaseDate} description={movie.description} director={movie.director} cast={movie.cast} 
                             ratings={movie.ratings}/>)
                     }

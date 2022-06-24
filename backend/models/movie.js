@@ -17,12 +17,12 @@ const movieSchema = new mongoose.Schema({
     ratings: [ratingSchema]
 });
 
-//converts the id for each object in movieSchema into a string
-movieSchema.method("toJSON", function() {
-    const { __v, _id, ...object } = this.toObject();
-    object.id = _id;
-    return object;
-  });
+// //converts the id for each object in movieSchema into a string
+// movieSchema.method("toJSON", function() {
+//     const { __v, _id, ...object } = this.toObject();
+//     object.id = _id;
+//     return object;
+//   });
 
 const Movie = mongoose.model('Movie', movieSchema);
 
